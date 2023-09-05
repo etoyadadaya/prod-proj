@@ -2,14 +2,20 @@ import react from "@vitejs/plugin-react-swc";
 import {resolve} from "path";
 import {defineConfig, splitVendorChunkPlugin} from "vite";
 import eslint from "vite-plugin-eslint";
+import {createHtmlPlugin} from "vite-plugin-html";
 
 export default defineConfig(() => {
   return {
     plugins: [
-      react(),
+      react({plugins: [["@swc/plugin-styled-components", {}]]}),
       splitVendorChunkPlugin(),
       eslint({
         exclude: ["**/node_modules/**", "**/packages/**"],
+      }),
+      createHtmlPlugin({
+        minify: true,
+        entry: "src/pages/_app.tsx",
+        template: "public/index.html",
       }),
     ],
     resolve: {

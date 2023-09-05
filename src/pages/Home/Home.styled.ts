@@ -10,15 +10,4 @@ const Wrapper = styled.section`
   color: #000000;
 `;
 
-const Button = styled.button<typeof HTMLButtonElement>`
-  /* Adapt the colors based on primary prop */
-  background: none;
-  color: black;
-
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid #bf4f74;
-  border-radius: 3px;
-`;
-
-export {Button, Wrapper};
+export {Wrapper};

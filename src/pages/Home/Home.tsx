@@ -1,9 +1,16 @@
 import React from "react";
 
-import {Wrapper} from "./Home.styled.js";
+import {Button} from "../../components/Button/Button";
+import {Wrapper} from "./Home.styled";
 
 const Home = () => {
-  return <Wrapper>ABOBA</Wrapper>;
+  return (
+    <Wrapper>
+      <Button color={"primary"}>Primary</Button>
+      <Button color={"secondary"}>Secondary</Button>
+      <Button disabled={true}>Disabled</Button>
+    </Wrapper>
+  );
 };
 
 export default Home;
