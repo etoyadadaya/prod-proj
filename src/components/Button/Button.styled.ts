@@ -20,11 +20,12 @@ const DISABLED = css`
 `;
 
 export const Container = styled.button<IButtonProps>`
-  padding: 10px 15px;
+  padding: 8px 12px;
   cursor: pointer;
   border: none;
-  border-radius: 50px;
-  font-weight: 500;
+  border-radius: 10px;
+  font-weight: 100;
+  font-size: 20px;
   outline: none;
   transition: all 0.2s;
 

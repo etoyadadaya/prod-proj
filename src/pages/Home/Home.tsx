@@ -1,15 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 
-import {Button} from "../../components/Button/Button";
+import {NewTodoForm} from "../../components/Todo/NewTodoForm";
+import {TodoList} from "../../components/Todo/TodoList";
+import {useAppDispatch} from "../../store/store";
+import {todoActions} from "../../store/todo/slices/todoSlice";
 import {Wrapper} from "./Home.styled";
 
 const Home = () => {
+  const [text, setText] = useState("");
+  const dispatch = useAppDispatch();
+
+  const handleAction = () => {
+    if (text.trim().length) {
+      dispatch(todoActions.addTodo(text));
+      setText("");
+    }
+  };
+
   return (
-    <Wrapper>
-      <Button color={"primary"}>Primary</Button>
-      <Button color={"secondary"}>Secondary</Button>
-      <Button disabled={true}>Disabled</Button>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <NewTodoForm
+          value={text}
+          updateText={setText}
+          handleAction={handleAction}
+        />
+        <TodoList />
+      </Wrapper>
+    </>
   );
 };
 
