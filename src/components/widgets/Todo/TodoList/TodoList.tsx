@@ -1,8 +1,8 @@
+import {Card} from "@widgets/Card/Card";
 import {FC} from "react";
 
 import {useAppSelector} from "../../../../store/store";
 import {getTodos} from "../../../../store/todo/selectors/getTodos";
-import {TodoItem} from "../TodoItem/TodoItem";
 import {StyledUl} from "./TodoList.styled";
 
 export const TodoList: FC = () => {
@@ -11,11 +11,11 @@ export const TodoList: FC = () => {
   return (
     <StyledUl>
       {todos.map(todo => (
-        <TodoItem
+        <Card
           key={todo.id}
-          id={todo.id}
+          date={todo.id}
           title={todo.title}
-          completed={todo.completed}
+          description={"This is Description"}
         />
       ))}
     </StyledUl>

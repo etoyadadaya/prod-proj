@@ -8,4 +8,7 @@ export const StyledSidebar = styled.div`
   transition: width 0.3s;
   padding: 20px;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;

@@ -2,14 +2,23 @@ import styled, {css} from "styled-components";
 
 import {IButtonProps} from "./Button";
 
-const COLOR = {
+const VARIANT = {
   primary: css`
     color: #fff;
     background: linear-gradient(#3f3cfe, #e943d5);
   `,
   secondary: css`
+    display: flex;
+    position: absolute;
+    right: 20px;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    height: 25px;
+    width: 25px;
     color: #000;
-    background: linear-gradient(#c7c7d2, #bcbaba);
   `,
 };
 
@@ -31,6 +40,6 @@ export const Container = styled.button<IButtonProps>`
   line-height: 24px;
   align-items: center;
 
-  ${props => props.color && COLOR[props.color]}
+  ${props => props.variant && VARIANT[props.variant]}
   ${props => props.disabled && DISABLED}
 `;

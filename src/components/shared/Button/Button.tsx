@@ -5,20 +5,20 @@ import {Container} from "./Button.styled";
 export interface IButtonProps extends HTMLProps<HTMLButtonElement> {
   onClick?: () => void;
   children?: ReactNode;
-  color?: "primary" | "secondary";
+  variant?: "primary" | "secondary";
   disabled?: boolean;
 }
 
 export const Button: FC<IButtonProps> = ({
   onClick,
   children,
-  color,
+  variant,
   disabled,
 }) => {
   return (
     <Container
       disabled={disabled}
-      color={color}
+      variant={variant}
       onClick={onClick}
     >
       {children}
