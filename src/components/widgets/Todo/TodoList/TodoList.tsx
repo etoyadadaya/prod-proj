@@ -1,7 +1,7 @@
 import {FC} from "react";
 
-import {useAppSelector} from "../../../store/store";
-import {getTodos} from "../../../store/todo/selectors/getTodos";
+import {useAppSelector} from "../../../../store/store";
+import {getTodos} from "../../../../store/todo/selectors/getTodos";
 import {TodoItem} from "../TodoItem/TodoItem";
 import {StyledUl} from "./TodoList.styled";
 

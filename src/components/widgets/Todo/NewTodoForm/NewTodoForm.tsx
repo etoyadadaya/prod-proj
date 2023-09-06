@@ -1,7 +1,7 @@
+import {Button} from "@shared/Button/Button";
+import {Input} from "@shared/Input/Input";
 import {FC} from "react";
 
-import {Button} from "../../Button/Button";
-import {Input} from "../../Input/Input";
 import {StyledLabel} from "./NewTodoForm.styled";
 
 interface NewTodoFormProps {

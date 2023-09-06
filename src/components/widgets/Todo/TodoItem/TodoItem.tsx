@@ -1,9 +1,9 @@
+import {Button} from "@shared/Button/Button";
+import {Input} from "@shared/Input/Input";
 import React, {FC} from "react";
 
-import {useAppDispatch} from "../../../store/store";
-import {todoActions} from "../../../store/todo/slices/todoSlice";
-import {Button} from "../../Button/Button";
-import {Input} from "../../Input/Input";
+import {useAppDispatch} from "../../../../store/store";
+import {todoActions} from "../../../../store/todo/slices/todoSlice";
 import {StyledLi, StyledSpan} from "./TodoItem.styled";
 
 interface TodoItemProps {
