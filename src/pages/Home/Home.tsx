@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
-import {NewTodoForm} from "../../components/Todo/NewTodoForm";
-import {TodoList} from "../../components/Todo/TodoList";
+import {NewTodoForm} from "../../components/Todo/NewTodoForm/NewTodoForm";
+import {TodoList} from "../../components/Todo/TodoList/TodoList";
 import {useAppDispatch} from "../../store/store";
 import {todoActions} from "../../store/todo/slices/todoSlice";
 import {Wrapper} from "./Home.styled";

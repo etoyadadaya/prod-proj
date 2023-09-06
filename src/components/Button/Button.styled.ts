@@ -23,11 +23,13 @@ export const Container = styled.button<IButtonProps>`
   padding: 8px 12px;
   cursor: pointer;
   border: none;
-  border-radius: 10px;
-  font-weight: 100;
-  font-size: 20px;
+  border-radius: 6px;
   outline: none;
   transition: all 0.2s;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  align-items: center;
 
   ${props => props.color && COLOR[props.color]}
   ${props => props.disabled && DISABLED}

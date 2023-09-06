@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const StyledLabel = styled.label`
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 50px;
+  justify-content: center;
+  gap: 15px;
 `;

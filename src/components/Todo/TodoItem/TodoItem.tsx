@@ -1,7 +1,10 @@
 import React, {FC} from "react";
 
-import {useAppDispatch} from "../../store/store";
-import {todoActions} from "../../store/todo/slices/todoSlice";
+import {useAppDispatch} from "../../../store/store";
+import {todoActions} from "../../../store/todo/slices/todoSlice";
+import {Button} from "../../Button/Button";
+import {Input} from "../../Input/Input";
+import {StyledLi, StyledSpan} from "./TodoItem.styled";
 
 interface TodoItemProps {
   id: string;
@@ -21,14 +24,14 @@ export const TodoItem: FC<TodoItemProps> = ({id, title, completed}) => {
   };
 
   return (
-    <li>
-      <input
+    <StyledLi>
+      <Input
         type={"checkbox"}
         checked={completed}
         onChange={handleOnChange}
       />
-      <span>{title}</span>
-      <button onClick={handleOnClick}>Delete</button>
-    </li>
+      <StyledSpan>{title}</StyledSpan>
+      <Button onClick={handleOnClick}>Delete</Button>
+    </StyledLi>
   );
 };
